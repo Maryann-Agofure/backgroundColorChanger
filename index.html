@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>BackgroundColorChanger</title>
+</head>
+<body>
+    <div id = 'background-div'>
+        <h2>Background-color changer</h2>
+        <p>Clicking on this button changes the background-color</p>
+        <button class = 'changeMe'>Click me to change the background-color</button>
+      </div>
+    <script>
+        let buttonChanger= document.querySelector('.changeMe');
+buttonChanger.addEventListener('click', function (){
+  let divBackground = document.querySelector('#background-div')
+  const colorChoices = ['green', 'red', 'plum', 'white', 'black'];
+let randomNumber = Math.round(Math.random() * 5);
+  divBackground.style.backgroundColor = colorChoices[randomNumber];
+})
+    </script>
+</body>
+</html>
